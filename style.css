@@ -17,6 +17,18 @@ footer{align-items:center;gap:18px}
 .parent-info b{display:block;margin-bottom:6px}
 .parent-info p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
 .parent-actions{display:flex;flex-wrap:wrap;gap:10px;padding:0 26px 26px}
+.feynman-line{display:flex;align-items:center;gap:12px;margin:0 0 16px!important;color:var(--ink)!important}
+.feynman-line span{padding:6px 10px;border-radius:999px;background:#e7f7f4;color:var(--aqua);font-size:12px;font-weight:900;white-space:nowrap}
+.feynman-line b{font-size:clamp(18px,2.3vw,26px);letter-spacing:-.02em}
+.parent-info .method-card{background:#eef9f6;border-color:#9ed7cf}
+.parent-info .method-card b{color:#16756c}
+.parent-info .first-use-card{background:#fffaf0;border-color:#ead18c}
+.first-use-card ol{list-style:none;padding:0;margin:14px 0;display:grid;gap:10px}
+.first-use-card li{display:flex;gap:10px;align-items:flex-start}
+.first-use-card li>span{width:25px;height:25px;flex:0 0 auto;display:grid;place-items:center;border-radius:50%;background:var(--coral);color:white;font-size:12px;font-weight:900}
+.first-use-card li p{padding-top:2px}
+.first-use-card .next-time{margin-top:13px;padding:11px 13px;background:white;border-radius:12px}
+.first-use-card .safe-note{margin-top:9px;color:#a44b35;font-weight:800}
 .secondary:disabled{cursor:not-allowed;opacity:.56;background:#ecece7}
 .claim-gate{display:grid;gap:11px;padding:22px 26px 26px}
 .claim-gate label{display:flex;align-items:flex-start;gap:12px;padding:15px 17px;border:1px solid var(--line);border-radius:17px;background:white;cursor:pointer}
