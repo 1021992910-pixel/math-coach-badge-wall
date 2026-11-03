@@ -17,11 +17,26 @@ footer{align-items:center;gap:18px}
 .parent-info b{display:block;margin-bottom:6px}
 .parent-info p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
 .parent-actions{display:flex;flex-wrap:wrap;gap:10px;padding:0 26px 26px}
+.secondary:disabled{cursor:not-allowed;opacity:.56;background:#ecece7}
+.claim-gate{display:grid;gap:11px;padding:22px 26px 26px}
+.claim-gate label{display:flex;align-items:flex-start;gap:12px;padding:15px 17px;border:1px solid var(--line);border-radius:17px;background:white;cursor:pointer}
+.claim-gate label:has(input:checked){border-color:var(--aqua);background:#f1fbf8}
+.claim-gate input{width:21px;height:21px;margin:1px 0 0;accent-color:var(--aqua);flex:0 0 auto}
+.claim-gate b{display:block;margin-bottom:5px}
+.claim-gate small{display:block;color:var(--muted);line-height:1.55}
+.gate-time{margin:2px 0 0;padding:11px 14px;border-radius:13px;background:#fff6d7;color:var(--ink);font-size:12px;line-height:1.6}
+.claim-gate .primary:disabled{cursor:not-allowed;opacity:.48;box-shadow:none}
+.badge-step-head{padding:20px 26px 0}
+.badge-step-head b{font-size:20px}
+.badge-step-head p{margin:5px 0 0;color:var(--muted);font-size:13px}
+[hidden]{display:none!important}
 
 @media(max-width:520px){
   .brand small{display:none}
   .parent-link{font-size:12px;padding:8px 10px}
   .parent-info{padding:18px 21px}
   .parent-actions{display:grid;padding:0 21px 21px}
+  .claim-gate{padding:18px 21px 21px}
+  .badge-step-head{padding:18px 21px 0}
 }
 
