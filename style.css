@@ -4,3 +4,24 @@
 @media(max-width:520px){main{width:min(92vw,480px)}h1{font-size:45px}.hero-copy>p{font-size:16px}.hero-actions{display:grid}.hero-actions>*{width:100%}.dashboard{gap:9px}.dashboard article{padding:14px;gap:9px}.stat-icon{width:42px;height:42px}.dashboard b{font-size:23px}.badge-grid{grid-template-columns:1fr}.claim-badges{grid-template-columns:1fr}.planet-stage{height:300px}.card-a{top:5%}.card-b{bottom:5%}.dialog-head{padding:21px}.claim-badges{padding:18px 21px}.claim-rule{margin:0 21px 21px}.week-section,.badges-section,.rules-section{padding-bottom:65px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
+/* Unified portal: keep the child view simple and move adult guidance into a dialog. */
+.brand small{letter-spacing:.12em}
+.topbar-actions{margin-left:auto;display:flex;align-items:center;gap:9px}
+.topbar-actions .icon-btn{margin-left:0}
+.parent-link,.footer-link{border:0;background:transparent;color:var(--ink);font-weight:900;cursor:pointer}
+.parent-link{padding:9px 12px;border-radius:999px;background:var(--card);border:1px solid var(--line)}
+footer{align-items:center;gap:18px}
+.footer-link{text-decoration:underline;text-underline-offset:4px}
+.parent-info{display:grid;gap:10px;padding:22px 26px}
+.parent-info article{border:1px solid var(--line);border-radius:17px;padding:15px 17px;background:white}
+.parent-info b{display:block;margin-bottom:6px}
+.parent-info p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
+.parent-actions{display:flex;flex-wrap:wrap;gap:10px;padding:0 26px 26px}
+
+@media(max-width:520px){
+  .brand small{display:none}
+  .parent-link{font-size:12px;padding:8px 10px}
+  .parent-info{padding:18px 21px}
+  .parent-actions{display:grid;padding:0 21px 21px}
+}
+
