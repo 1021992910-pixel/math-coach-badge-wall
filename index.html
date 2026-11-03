@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#173b52">
+  <meta name="description" content="数学讲题陪练独立徽章墙：每天讲一道题，领取讲题星、思考金币和技能徽章。">
+  <title>数学讲题陪练 · 我的徽章墙</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="sky" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="返回徽章墙首页"><span class="brand-star">★</span><span>数学讲题陪练<small>我的徽章墙</small></span></a>
+    <button class="icon-btn" id="settings-open" type="button" aria-label="打开设置">⚙</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">ONE PROBLEM A DAY</span>
+        <h1>每天讲一题，<br><em>点亮一颗星</em></h1>
+        <p>先去“数学讲题陪练”把一道题讲清楚，再回来领取今天的讲题星、思考金币和技能徽章。</p>
+        <div class="hero-actions">
+          <a class="secondary" href="https://www.coze.cn/store/agent/7703510038878502912?bot_id=true" target="_blank" rel="noopener">先去讲一道题 ↗</a>
+          <button class="primary" id="claim-open" type="button">我讲完了，领取奖励</button>
+        </div>
+        <p class="tiny-note">每天最多领取一次 · 奖励讲清思路和主动检查，不只奖励答对</p>
+      </div>
+      <div class="planet-stage" aria-hidden="true">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="planet"><span>🧠</span><b>讲题<br>星球</b></div>
+        <div class="float-card card-a"><span>⭐</span><b id="hero-stars">0</b><small>讲题星</small></div>
+        <div class="float-card card-b"><span>🪙</span><b id="hero-coins">0</b><small>思考金币</small></div>
+      </div>
+    </section>
+
+    <section class="dashboard" aria-label="我的奖励数据">
+      <article><span class="stat-icon coral">⭐</span><div><b id="total-stars">0</b><small>讲题星</small></div></article>
+      <article><span class="stat-icon yellow">🪙</span><div><b id="total-coins">0</b><small>思考金币</small></div></article>
+      <article><span class="stat-icon aqua">🔥</span><div><b id="current-streak">0</b><small>连续天数</small></div></article>
+      <article><span class="stat-icon blue">🎖️</span><div><b id="badge-count">0</b><small>已点亮徽章</small></div></article>
+    </section>
+
+    <section class="week-section">
+      <div class="section-head"><div><span class="eyebrow">SEVEN-DAY JOURNEY</span><h2>七日讲题航线</h2></div><p id="week-message">再点亮7颗星，解锁“七日数学小老师”</p></div>
+      <div class="week-path" id="week-path"></div>
+      <div class="title-card" id="title-card"><span class="title-lock">🔒</span><div><small>七日称号</small><b>七日数学小老师</b><p>连续完成7天讲题后点亮</p></div></div>
+    </section>
+
+    <section class="badges-section">
+      <div class="section-head"><div><span class="eyebrow">SKILL BADGES</span><h2>我的技能徽章</h2></div><p>今天哪一点做得最好，就点亮哪一枚。</p></div>
+      <div class="badge-grid" id="badge-grid"></div>
+    </section>
+
+    <section class="rules-section">
+      <div class="rules-copy"><span class="eyebrow">HOW IT WORKS</span><h2>不是刷金币，<br>是把思路讲明白</h2></div>
+      <div class="rules-list">
+        <article><span>01</span><div><b>一天一题就够了</b><p>讲完一道题、说明理由，再说一种检查方法。</p></div></article>
+        <article><span>02</span><div><b>讲错也能得徽章</b><p>发现问题后自己改正，可以获得“纠错小勇士”。</p></div></article>
+        <article><span>03</span><div><b>记录只在这台设备</b><p>不需要注册，不上传孩子的姓名、题目或录音。</p></div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><b>数学讲题陪练</b><span>公益试用 · 每天一题 · 让孩子成为会思考的小老师</span></footer>
+
+  <dialog id="claim-dialog" aria-labelledby="claim-title">
+    <div class="dialog-head"><div><span class="eyebrow">TODAY'S REWARD</span><h2 id="claim-title">今天哪一点做得最好？</h2><p>选一枚最符合今天表现的技能徽章。</p></div><button class="dialog-close" type="button" data-close="claim-dialog" aria-label="关闭">×</button></div>
+    <div class="claim-badges" id="claim-badges"></div>
+    <p class="claim-rule">领取后：⭐讲题星 +1　🪙思考金币 +10。今天不能重复领取。</p>
+  </dialog>
+
+  <dialog id="reward-dialog" aria-labelledby="reward-title">
+    <div class="reward-box">
+      <div class="reward-rays" aria-hidden="true"></div>
+      <span class="reward-pop" id="reward-icon">🎖️</span>
+      <span class="eyebrow">REWARD UNLOCKED</span>
+      <h2 id="reward-title">今天的奖励到账啦！</h2>
+      <div class="reward-line"><b>⭐ +1</b><b>🪙 +10</b></div>
+      <h3 id="reward-name"></h3><p id="reward-reason"></p>
+      <button class="primary" type="button" data-close="reward-dialog">收下奖励</button>
+    </div>
+  </dialog>
+
+  <dialog id="settings-dialog" aria-labelledby="settings-title">
+    <div class="dialog-head"><div><span class="eyebrow">LOCAL PROGRESS</span><h2 id="settings-title">奖励记录</h2><p>数据只保存在当前浏览器，更换设备前可以导出备份。</p></div><button class="dialog-close" type="button" data-close="settings-dialog" aria-label="关闭">×</button></div>
+    <div class="settings-actions">
+      <button class="secondary" id="export-data" type="button">导出奖励记录</button>
+      <button class="secondary" id="import-data" type="button">导入奖励记录</button>
+      <input id="import-file" type="file" accept="application/json,.json" hidden>
+      <button class="danger" id="reset-data" type="button">清空这台设备的记录</button>
+    </div>
+    <p class="settings-note">无痕模式、清理浏览器数据或卸载浏览器可能导致记录丢失。</p>
+  </dialog>
+
+  <div id="confetti" aria-hidden="true"></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js" defer></script>
+</body>
+</html>
+
