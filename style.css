@@ -32,6 +32,8 @@ footer{align-items:center;gap:18px}
 [hidden]{display:none!important}
 
 @media(max-width:520px){
+  .brand{gap:8px}
+  .brand>span:last-child{font-size:13px}
   .brand small{display:none}
   .parent-link{font-size:12px;padding:8px 10px}
   .parent-info{padding:18px 21px}
